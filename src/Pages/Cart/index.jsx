@@ -4,7 +4,7 @@ import { CartContext } from "../../providers/cart";
 import { CartContainer, CartResume, MainContainer } from "./style";
 
 function Cart() {
-  const { cart } = useContext(CartContext);
+  const { cart, removeFromCart } = useContext(CartContext);
 
   return (
     <>
@@ -18,6 +18,14 @@ function Cart() {
                   <img src={item.image} alt={`Foto do ${item.name}`} />
                   <h2>{item.name}</h2>
                   <span>R$ {item.price.toFixed(2).replace(".", ",")}</span>
+                  <p
+                    className="remove"
+                    onClick={() => {
+                      removeFromCart(item);
+                    }}
+                  >
+                    X
+                  </p>
                 </li>
               );
             })}

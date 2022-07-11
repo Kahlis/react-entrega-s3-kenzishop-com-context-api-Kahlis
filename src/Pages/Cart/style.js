@@ -36,6 +36,23 @@ export const CartContainer = styled.ul`
         display: flex;
         flex-direction: row;
     }
+
+    p {
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-family: "Poppins";
+        font-weight: 700;
+        color: white;
+
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
 `
 
 export const MainContainer = styled.div`
